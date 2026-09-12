@@ -1,27 +1,17 @@
-#include <stdio.h>
+class Student:
+    def __init__(self):
+        self.rollNo = 0
+        self.name = ""
+        self.marks = 0.0
 
-struct Student {
-    int rollNo;
-    char name[50];
-    float marks;
-};
 
-int main() {
-    struct Student student;
+student = Student()
 
-    printf("Enter roll number: ");
-    scanf("%d", &student.rollNo);
+student.rollNo = int(input("Enter roll number: "))
+student.name = input("Enter name: ")
+student.marks = float(input("Enter marks: "))
 
-    printf("Enter name: ");
-    scanf("%s", student.name);
-
-    printf("Enter marks: ");
-    scanf("%f", &student.marks);
-
-    printf("\n--- Student Details ---\n");
-    printf("Roll Number: %d\n", student.rollNo);
-    printf("Name: %s\n", student.name);
-    printf("Marks: %.2f\n", student.marks);
-
-    return 0;
-}
+print("\n--- Student Details ---")
+print("Roll Number:", student.rollNo)
+print("Name:", student.name)
+print(f"Marks: {student.marks:.2f}")
